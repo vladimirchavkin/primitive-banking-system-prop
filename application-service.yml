@@ -1,0 +1,11 @@
+# server port
+server:
+  port: 0
+# microservices registration url
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+#make sure that any instance has a unique id
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}

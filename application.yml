@@ -1,0 +1,13 @@
+# Logging pattern
+logging:
+  pattern:
+    console: "%C{.1} [%-5level] %d{HH:mm:ss} - %msg%n"
+# Enabling actuator
+managment:
+  endpoint:
+    gateway:  
+      enabled: true
+# Get endpoints
+    web:
+      exposure: 
+        include: "*"
