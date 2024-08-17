@@ -17,13 +17,13 @@ spring:
       # Account-service route settings
       routes[0]:
         id: account-service
-        uri: lb://account
+        uri: lb://accounts
         predicates[0]: Path=/main/test
         predicates[1]: Method=GET
       # Bill-service route settings
       routes[1]:
         id: bill-service
-        uri: lb://bill
+        uri: lb://bills
         predicates[0]: Path=/main/test
         predicates[1]: Method=GET
       # Deposit-service route settings
