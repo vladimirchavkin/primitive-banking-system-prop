@@ -12,25 +12,25 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-
-# Roots config
-      # Account-service route settings
-      routes[0]:
-        id: account-service
-        uri: lb://account-service
-        predicates[0]: Path=/accounts
-      # Bill-service route settings
-      routes[1]:
-        id: bill-service
-        uri: lb://bill-service
-        predicates[0]: Path=/bills
-      # Deposit-service route settings
-      routes[2]:
-        id: deposit-service
-        uri: lb://bill-service
-        predicates[0]: Path=/deposit
-      # Payment-service route settings
-      routes[3]:
-        id: payment-service
-        uri: lb://bill-service
-        predicates[0]: Path=/payment
+      # Roots config
+      mvc:
+        # Account-service route settings
+        routes[0]:
+          id: account-service
+          uri: lb://account-service
+          predicates[0]: Path=/accounts
+        # Bill-service route settings
+        routes[1]:
+          id: bill-service
+          uri: lb://bill-service
+          predicates[0]: Path=/bills
+        # Deposit-service route settings
+        routes[2]:
+          id: deposit-service
+          uri: lb://bill-service
+          predicates[0]: Path=/deposit
+        # Payment-service route settings
+        routes[3]:
+          id: payment-service
+          uri: lb://bill-service
+          predicates[0]: Path=/payment
